@@ -2,36 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+    <title>FEM Results Summary</title>
     <link rel="stylesheet" href="style.css" />
-
-    <title>Frontend Mentor | Results summary component</title>
   </head>
   <body>
     <main>
       <div class="result-summary">
-        <div class="result grid-flow" data-spacing="large">
-          <h1 class="section-title">Your result</h1>
-
+        <div class="results grid-flow" data-spacing="large">
+          <h1 class="section-title">Your Result</h1>
           <p class="result-score"><span>76</span> of 100</p>
+
+          <div class="grid-flow">
+            <p class="result-rank">Great</p>
+            <p>
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
         </div>
 
-        <div class="grid-flow">
-          <p class="result-rank">Great</p>
-          <p>
-            You scored higher than 65% of the people who have taken these tests.
-          </p>
-        </div>
         <div class="summary grid-flow" data-spacing="large">
           <h2 class="section-title">Summary</h2>
+
           <div class="grid-flow">
             <div class="summary-item" data-item-type="accent-1">
               <div class="flex-group">
@@ -65,21 +59,18 @@
                   viewBox="0 0 20 20"
                 >
                   <path
-                    stroke="#FFB21E"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.25"
                     d="M5.833 11.667a2.5 2.5 0 1 0 .834 4.858"
                   />
                   <path
-                    stroke="#FFB21E"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.25"
                     d="M3.553 13.004a3.333 3.333 0 0 1-.728-5.53m.025-.067a2.083 2.083 0 0 1 2.983-2.824m.199.054A2.083 2.083 0 1 1 10 3.75v12.917a1.667 1.667 0 0 1-3.333 0M10 5.833a2.5 2.5 0 0 0 2.5 2.5m1.667 3.334a2.5 2.5 0 1 1-.834 4.858"
                   />
                   <path
-                    stroke="#FFB21E"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.25"
@@ -101,7 +92,6 @@
                   viewBox="0 0 20 20"
                 >
                   <path
-                    stroke="#00BB8F"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.25"
@@ -123,14 +113,12 @@
                   viewBox="0 0 20 20"
                 >
                   <path
-                    stroke="#1125D6"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.25"
                     d="M10 11.667a1.667 1.667 0 1 0 0-3.334 1.667 1.667 0 0 0 0 3.334Z"
                   />
                   <path
-                    stroke="#1125D6"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.25"
@@ -141,16 +129,11 @@
               </div>
               <p class="summary-score"><span>72</span> / 100</p>
             </div>
-            <button class="button">Continue</button>
           </div>
+
+          <button class="button">Continue</button>
         </div>
       </div>
     </main>
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="ronenhammond.me">Ronen Hammond</a>.
-    </footer>
   </body>
 </html>

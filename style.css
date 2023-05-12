@@ -1,9 +1,9 @@
-@font-face{
-  font-family: 'HankenGrotesk';
+@font-face {
+  font-family: "HankenGrotesk";
   font-display: swap;
   font-weight: 100 900;
-  src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf')
-        format('truetype');
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+    format("truetype");
 }
 
 :root {
@@ -22,25 +22,26 @@
   --clr-neutral-300: hsl(var(--clr-neutral-hsl-300));
   --clr-neutral-700: hsl(var(--clr-neutral-hsl-700));
 
-
   --clr-primary-400: hsl(var(--clr-primary-hsl-400));
   --clr-primary-500: hsla(var(--clr-primary-hsl-500));
   --clr-secondary-400: hsl(var(--clr-secondary-hsl-400));
 
   --gradient-primary: linear-gradient(
-      var(--clr-primary-400), 
-      var(--clr-secondary-400));
+    var(--clr-primary-400),
+    var(--clr-secondary-400)
+  );
 
   --gradient-to-transparent: linear-gradient(
-      var(--clr-primary-500),
-      hsl(var(--clr-secondary-hsl-500), 0));
+    var(--clr-primary-500),
+    hsl(var(--clr-secondary-hsl-500), 0)
+  );
 
   --clr-accent-1: 0, 100%, 67%;
   --clr-accent-2: 39, 100%, 56%;
   --clr-accent-3: 166, 100%, 37%;
   --clr-accent-4: 234, 85%, 45%;
 
-  --font-family-default: 'HankenGrotesk', sans-serif;
+  --font-family-default: "HankenGrotesk", sans-serif;
 
   --fw-regular: 500;
   --fw-bold: 700;
@@ -71,27 +72,27 @@ svg {
   max-width: 100%;
 }
 
-body { 
+body {
   font-family: var(--font-family-default);
   font-size: var(--fs-400);
   color: var(--clr-neutral-700);
 }
 
-@media (min-width: 600px){
-  body{
+@media (min-width: 600px) {
+  body {
     min-height: 100vh;
-  display: grid;
-  place-items: center;
+    display: grid;
+    place-items: center;
   }
 }
 
-.section-title{
+.section-title {
   font-weight: var(--fw-bold);
   font-size: var(--fs-600);
 }
 
-.button{
-  color: var(--clr-neutral-hsl-100);
+.button {
+  color: var(--clr-neutral-100);
   line-height: 1;
   background: var(--clr-neutral-700);
   padding: 1rem 2rem;
@@ -101,14 +102,36 @@ body {
 }
 
 .button:hover,
-.button:focus-visible{
+.button:focus-visible {
   background: var(--gradient-primary);
 }
 
-.attribution {
-  font-size: 11px;
+.result-summary {
+  --padding: 2.5rem;
+  --border-radius: 2rem;
+  max-width: 46rem;
+  display: grid;
+}
+
+@media (min-width: 600px) {
+  .result-summary {
+    grid-template-columns: 1fr 1fr;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: .5rem 1rem 3rem hsl(var(--clr-neutral-hsl-700), .2);
+  }
+}
+
+.results,
+.summary{
+  padding: var(--padding);
+}
+
+.results{
+  color: hsl(var(--clr-neutral-hsl-100), 0.7);
   text-align: center;
+  background: var(--gradient-primary);
+  border-radius: var(--border-radius);
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
+
+
